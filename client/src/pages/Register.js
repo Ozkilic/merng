@@ -19,7 +19,7 @@ const Register = () => {
   })
 
   const onChange = (e) => {
-    setValues(...values, { [e.target.name]: e.target.value })
+    setValues({ ...values, [e.target.name]: e.target.value })
   }
 
   const onSubmit = (e) => {
@@ -35,6 +35,7 @@ const Register = () => {
           label='Username'
           placeholder='Username...'
           name='username'
+          type='text'
           value={values.username}
           onChange={onChange}
         />
@@ -42,6 +43,7 @@ const Register = () => {
           label='Email'
           placeholder='Email...'
           name='email'
+          type='email'
           value={values.email}
           onChange={onChange}
         />
@@ -49,6 +51,7 @@ const Register = () => {
           label='Password'
           placeholder='Password...'
           name='password'
+          type='password'
           value={values.password}
           onChange={onChange}
         />
@@ -56,6 +59,7 @@ const Register = () => {
           label='Confirm Password'
           placeholder='Confirm Password...'
           name='confirmPassword'
+          type='password'
           value={values.confirmPassword}
           onChange={onChange}
         />

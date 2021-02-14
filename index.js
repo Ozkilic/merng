@@ -7,7 +7,7 @@ const { MONGODB } = require('./config.js')
 
 const pubsub = new PubSub()
 
-const PORT = process.env.port || 500
+const PORT = process.env.PORT || 500
 
 const server = new ApolloServer({
   typeDefs,
